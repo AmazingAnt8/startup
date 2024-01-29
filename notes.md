@@ -31,4 +31,9 @@ I learned: DON'T UPDATE/UPGRADE THE UBUNTU THING
 
 Elastic IP: 35.174.135.119
 
-Command to remote shell into server: ssh -i [key pair file] ubuntu@[ip address]
+Command to remote shell into server: ssh -i [key pair file] ubuntu@neurospicy.click
+
+### HTML
+index.html is the default file to open if you don't specify
+Title is just part of the information in the head (not actually rendered in the body)
+I can't figure out how to embed videos from YouTube (if it's possible), but I successfully downloaded a NASA YouTube video, uploaded it to File Garden, then used the link there to embed it in my HTML on CodePen.
