@@ -29,3 +29,15 @@ I am going to use the required technologies in the following ways:
 - **DB/Login** - Register and login users. Store users, quandries, suggestions, and journal entries in database.
 - **WebSocket** - As each user completes self-care suggestions, this is shown in all other user's "Friends" feed. Users can react in celebration to these items, which show up in real time on each user's feed.
 - **React** - Tying it together with the React framework.
+
+## HTML
+Properly structured HTML
+- HTML pages for each component of your application
+- Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER
+- Links between pages as necessary
+- Application textual content
+- Placeholder for 3rd party service calls
+- Application images
+- Login placeholder, including user name display
+- Database data placeholder showing content stored in the database
+- WebSocket data placeholder showing where realtime communication will go
