@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Quandary Selection</title>
+    </head>
+
+    <body>
+        <main>
+            <form method="get"> <!--Save text input to journals on submit-->
+                <label for="journal">Write about how you feel to help you determine which quandary to choose below:</label>
+                <br />
+                <textarea id="journal" rows="4" cols="50"></textarea>
+                <br />
+                <button type="submit">Save</button>
+            </form>
+            <hr />
+            <form method="get" action="suggestion.html">
+                <label for="journal">Options--if you are unsure, just pick one you think might be right:</label>
+                <br />
+                <!--I'm going to have to figure out how to have a variable number of these with variable names-->
+                <!--(I hope that's possible)-->
+                <!--These are just placeholder suggestions for now-->
+                <label for="radio1">Overstimulated</label>
+                <input type="radio" id="radio1" name="varRadio" value="radio1" />
+                <br />
+                <label for="radio2">Understimulated</label>
+                <input type="radio" id="radio2" name="varRadio" value="radio2" />
+                <br />
+                <label for="radio3">Anxious</label>
+                <input type="radio" id="radio3" name="varRadio" value="radio3" />
+                <br />
+                <label for="radio4">Lethargic</label>
+                <input type="radio" id="radio4" name="varRadio" value="radio4" />
+                <br />
+                <button type="submit">Submit</button>
+            </form>
+          </main>
+
+        <footer>
+            <hr />
+            <span class="text-reset">Ari Tanner</span>
+            <br />
+            <a href="https://github.com/AmazingAnt8/startup">GitHub Repo</a>
+        </footer>
+    </body>
+</html>
