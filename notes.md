@@ -40,3 +40,6 @@ I can't figure out how to embed videos from YouTube (if it's possible), but I su
 
 DEPLOY: ./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup
 (copy the deployFiles.sh from the Simon repo)
+
+### CSS
+Content inside padding inside border inside margin (peanut butter and margarin)
