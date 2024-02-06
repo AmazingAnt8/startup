@@ -44,6 +44,7 @@ Properly structured HTML
     - on friends.html, the date and time of each post will be retrieved through a 3rd party call
 - Application images
     - the celebration button uses an image from the internet (no attribution required)
+    - the login page uses a colorful brain image
 - Login placeholder, including user name display
     - index.html is the login page. The username is also displayed on each page with a header
 - Database data placeholder showing content stored in the database
