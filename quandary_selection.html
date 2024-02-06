@@ -7,13 +7,16 @@
     <body>
         <header>
             <p>
-            <a href="quandary_selection.html">Quandary Selection</a>  |  
-            <a href="personalize.html">Personalize</a>  |  
-            <a href="friends.html">Friends</a>
-            <hr />
+                Hi, {username}!
+                <br />
+                <a href="quandary_selection.html">Quandary Selection</a>  |  
+                <a href="personalize.html">Personalize</a>  |  
+                <a href="friends.html">Friends</a>  |  
+                <a href="index.html">Log Out</a>
+                <hr />
             </p>
         </header>
-        
+
         <main>
             <form method="get"> <!--Save text input to journals on submit-->
                 <label for="journal">Write about how you feel to help you determine which quandary to choose below:</label>
@@ -21,6 +24,7 @@
                 <textarea id="journal" rows="4" cols="50"></textarea>
                 <br />
                 <button type="submit">Save</button>
+                <!--How do I have it not clear the text from the screen?-->
             </form>
             <hr />
             <form method="get" action="suggestion.html">

@@ -33,11 +33,20 @@ I am going to use the required technologies in the following ways:
 ## HTML
 Properly structured HTML
 - HTML pages for each component of your application
+    - index.html (login), quandary_selection.html, suggestion.html, personalize.html, friends.html
 - Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER
+    - throughout my files
 - Links between pages as necessary
+    - in the header for three of the files, and through navigation buttons for the others
 - Application textual content
+    - all my pages have the necessary text
 - Placeholder for 3rd party service calls
+    - on friends.html, the date and time of each post will be retrieved through a 3rd party call
 - Application images
+    - the celebration button uses an image from the internet (no attribution required)
 - Login placeholder, including user name display
+    - index.html is the login page. The username is also displayed on each page with a header
 - Database data placeholder showing content stored in the database
+    - Each user's personal list of quandaries and suggestions, their journal entries, and their suggestion completions will be stored in te database
 - WebSocket data placeholder showing where realtime communication will go
+    - on friends.html, the celebration count will update in real time as users click the celebration button
