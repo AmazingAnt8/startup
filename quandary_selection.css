@@ -3,6 +3,8 @@
 * {
     font-family: /*"Comic Sans MS", "Comic Sans",*/ arial, sans-serif;
     box-sizing: border-box;
+    color: white;
+    background-color: black;
 }
 
 html {
@@ -14,4 +16,16 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-  }
+}
+
+header {
+    flex: 0 80px;
+    background-color: rgb(23, 28, 64);
+    padding-left: 0.3em;
+}
+
+footer {
+    flex: 0 30px;
+    background-color: rgb(23, 28, 64);
+    padding-left: 0.3em;
+}
