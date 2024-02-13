@@ -1,0 +1,44 @@
+/* This is a site for neurodivergent people--following dyslexia-friendly style guide: https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide#:~:text=Readable%20fonts,%2F%2016%2D19%20px */
+
+* {
+    font-family: /*"Comic Sans MS", "Comic Sans",*/ arial, sans-serif;
+    box-sizing: border-box;
+    color: white;
+    
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+header {
+    flex: 0 80px;
+    background-color: rgb(26, 11, 65);
+    padding-left: 0.5em;
+}
+
+button {
+    color: black;
+    background-color: rgb(153, 152, 158);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(23, 22, 22);
+}
+
+footer {
+    flex: 0 30px;
+    background-color: rgb(26, 11, 65);
+    padding-left: 0.5em;
+}

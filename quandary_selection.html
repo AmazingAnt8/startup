@@ -2,6 +2,7 @@
 <html lang="eng">
     <head>
         <title>Quandary Selection</title>
+        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="quandary_selection.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
@@ -12,7 +13,7 @@
         <body class="bg-dark text-light">
             <header class="container-fluid">
               <nav class="navbar fixed-top navbar-dark">
-                <a class="navbar-item" href="#">Neurospicy Care</a>
+                <a class="navbar-item">Neurospicy Care</a>
                 <menu class="navbar-nav">
                   <li class="nav-item">
                     <a class="nav-link" href="quandary_selection.html">Quandary Selection</a>
@@ -57,18 +58,22 @@
                 <!--I'm going to have to figure out how to have a variable number of these with variable names-->
                 <!--(I hope that's possible)-->
                 <!--These are just placeholder suggestions for now-->
-                <label for="radio1">Overstimulated</label>
-                <input type="radio" id="radio1" name="varRadio" value="radio1" />
-                <br />
-                <label for="radio2">Understimulated</label>
-                <input type="radio" id="radio2" name="varRadio" value="radio2" />
-                <br />
-                <label for="radio3">Anxious</label>
-                <input type="radio" id="radio3" name="varRadio" value="radio3" />
-                <br />
-                <label for="radio4">Lethargic</label>
-                <input type="radio" id="radio4" name="varRadio" value="radio4" />
-                <br />
+                <div class="radio">
+                    <label for="radio1">Overstimulated</label>
+                    <input type="radio" id="radio1" name="varRadio" value="radio1" />
+                </div>
+                <div class="radio">
+                    <label for="radio2">Understimulated</label>
+                    <input type="radio" id="radio2" name="varRadio" value="radio2" />
+                </div>
+                <div class="radio">
+                    <label for="radio3">Anxious</label>
+                    <input type="radio" id="radio3" name="varRadio" value="radio3" />
+                </div>
+                <div class="radio">
+                    <label for="radio4">Lethargic</label>
+                    <input type="radio" id="radio4" name="varRadio" value="radio4" />
+                </div>
                 <button type="submit">Submit</button>
             </form>
           </main>
