@@ -24,6 +24,16 @@ header {
     padding-left: 0.5em;
 }
 
+.logo {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+    flex-direction: column;
+    float: right;
+    font-size: 9px;
+}
+
 button {
     color: black;
     background-color: rgb(153, 152, 158);
@@ -35,6 +45,10 @@ main {
     height: 100vh;
     background-color: rgb(23, 22, 22);
     padding-left: 0.5em;
+}
+
+.content {
+    margin: 15px;
 }
 
 footer {
