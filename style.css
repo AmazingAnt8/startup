@@ -4,7 +4,6 @@
     font-family: /*"Comic Sans MS", "Comic Sans",*/ arial, sans-serif;
     box-sizing: border-box;
     color: white;
-    
 }
 
 html {
@@ -35,6 +34,7 @@ main {
     flex-direction: column;
     height: 100vh;
     background-color: rgb(23, 22, 22);
+    padding-left: 0.5em;
 }
 
 footer {

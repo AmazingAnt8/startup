@@ -43,39 +43,45 @@
         </header>-->
 
         <main>
-            <form method="get"> <!--Save text input to journals on submit-->
-                <label for="journal">Write about how you feel to help you determine which quandary to choose below:</label>
-                <br />
-                <textarea id="journal" rows="4" cols="50"></textarea>
-                <br />
-                <button type="submit">Save</button>
-                <!--How do I have it not clear the text from the screen?-->
-            </form>
-            <hr />
-            <form method="get" action="suggestion.html">
-                <label for="journal">Options--if you are unsure, just pick one you think might be right:</label>
-                <br />
-                <!--I'm going to have to figure out how to have a variable number of these with variable names-->
-                <!--(I hope that's possible)-->
-                <!--These are just placeholder suggestions for now-->
-                <div class="radio">
-                    <label for="radio1">Overstimulated</label>
-                    <input type="radio" id="radio1" name="varRadio" value="radio1" />
+            <div class="row">
+                <div class="column">
+                    <form method="get"> <!--Save text input to journals on submit-->
+                        <label for="journal">Write about how you feel to help you determine which quandary to choose to the right:</label>
+                        <br />
+                        <textarea id="journal" rows="4" cols="50"></textarea>
+                        <br />
+                        <button type="submit">Save</button>
+                        <!--How do I have it not clear the text from the screen?-->
+                    </form>
                 </div>
-                <div class="radio">
-                    <label for="radio2">Understimulated</label>
-                    <input type="radio" id="radio2" name="varRadio" value="radio2" />
+                <div class="column">
+                    <form method="get" action="suggestion.html">
+                        <label for="journal">Options--if you are unsure, just pick one you think might be right:</label>
+                        <br />
+                        <!--I'm going to have to figure out how to have a variable number of these with variable names-->
+                        <!--(I hope that's possible)-->
+                        <!--These are just placeholder suggestions for now-->
+                        <div class="radio">
+                            <label for="radio1">Overstimulated</label>
+                            <input type="radio" id="radio1" name="varRadio" value="radio1" />
+                        </div>
+                        <div class="radio">
+                            <label for="radio2">Understimulated</label>
+                            <input type="radio" id="radio2" name="varRadio" value="radio2" />
+                        </div>
+                        <div class="radio">
+                            <label for="radio3">Anxious</label>
+                            <input type="radio" id="radio3" name="varRadio" value="radio3" />
+                        </div>
+                        <div class="radio">
+                            <label for="radio4">Lethargic</label>
+                            <input type="radio" id="radio4" name="varRadio" value="radio4" />
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
-                <div class="radio">
-                    <label for="radio3">Anxious</label>
-                    <input type="radio" id="radio3" name="varRadio" value="radio3" />
-                </div>
-                <div class="radio">
-                    <label for="radio4">Lethargic</label>
-                    <input type="radio" id="radio4" name="varRadio" value="radio4" />
-                </div>
-                <button type="submit">Submit</button>
-            </form>
+            </div>
+            
           </main>
 
         <footer>

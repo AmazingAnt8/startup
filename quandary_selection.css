@@ -1,12 +1,23 @@
 textarea {
     color: black;
-    background-color:rgb(153, 152, 158);
+    background-color:rgb(198, 197, 205);
 }
 
 .radio {
     align-items: flex-start;
     color: red;
     /*this doesn't seem to be doing anything. how do I edit the radio buttons and put the button on the left?*/
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+/* how do I make one column go under the other for a small screen view? */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /*.nav-item {
