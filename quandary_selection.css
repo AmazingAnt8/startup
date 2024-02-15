@@ -11,13 +11,13 @@ textarea {
 
 @media (orientation: portrait) {
     .row {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
 @media (orientation: landscape) {
     .row {
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
@@ -29,7 +29,6 @@ textarea {
 .row {
     display: flex;
     content: "";
-    display: table;
     clear: both;
 }
 
