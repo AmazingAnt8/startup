@@ -55,8 +55,14 @@ Properly structured HTML
 ## CSS
 Properly styled CSS
 - Header, footer, and main content body
+    - On each page
 - Navigation elements
+    - Links to the appropriate pages from the appropriate pages
 - Responsive to window resizing
+    - Flex responds to resizing
 - Application elements
+    - Dark theme contrast and deals with some spacing
 - Application text content
+    - Text and consistent fonts and colors
 - Application images
+    - Image logo justified right
