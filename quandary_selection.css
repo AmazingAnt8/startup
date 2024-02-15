@@ -9,12 +9,25 @@ textarea {
     /*this doesn't seem to be doing anything. how do I edit the radio buttons and put the button on the left?*/
 }
 
+@media (orientation: portrait) {
+    .row {
+        flex-direction: row;
+    }
+}
+
+@media (orientation: landscape) {
+    .row {
+        flex-direction: column;
+    }
+}
+
 .column {
-    float: left;
-    width: 50%;
+    flex: 1;
+    margin: 5px;
 }
 /* how do I make one column go under the other for a small screen view? */
-.row:after {
+.row {
+    display: flex;
     content: "";
     display: table;
     clear: both;

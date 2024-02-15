@@ -51,3 +51,12 @@ Properly structured HTML
     - Each user's personal list of quandaries and suggestions, their journal entries, and their suggestion completions will be stored in te database
 - WebSocket data placeholder showing where realtime communication will go
     - on friends.html, the celebration count will update in real time as users click the celebration button
+
+## CSS
+Properly styled CSS
+- Header, footer, and main content body
+- Navigation elements
+- Responsive to window resizing
+- Application elements
+- Application text content
+- Application images

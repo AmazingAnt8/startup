@@ -37,6 +37,7 @@ header {
 button {
     color: black;
     background-color: rgb(153, 152, 158);
+    width: 80px; 
 }
 
 main {
