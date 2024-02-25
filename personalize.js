@@ -1,0 +1,7 @@
+function addNewSuggestion() {
+
+}
+
+function addNewQuandary() {
+    
+}

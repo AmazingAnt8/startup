@@ -1,0 +1,7 @@
+function celebrate() {
+
+}
+
+function newPost() {
+    
+}
