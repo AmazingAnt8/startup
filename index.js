@@ -1,7 +1,11 @@
 function login() {
-    //login returning user
+    //retrieve stored data about user
 }
 
 function newUser () {
-    //create a new user
+    const username = document.querySelector("#username");
+    localStorage.setItem("username", username.value);
+    const password = document.querySelector("#password");
+    localStorage.setItem("password", password.value);
+    //store this somewhere
 }
