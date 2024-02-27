@@ -11,7 +11,7 @@ function newUser () {
 }
 
 function login () {
-    if (document.querySelector("#username") == localStorage.getItem("username")) /*why isn't this working?*/{
+    if (document.querySelector("#username") === localStorage.getItem("username")) /*why isn't this working?*/{
         window.location.href = "quandary_selection.html";
     }
     else {
