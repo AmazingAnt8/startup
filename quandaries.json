@@ -1,0 +1,39 @@
+{
+    "quandaries": [
+        {
+            "item": "Overstimulated",
+            "numOfSuggestions": 2
+        },
+        {
+            "item": "Understimulated",
+            "numOfSuggestions": 3
+        },
+        {
+            "item": "Anxious",
+            "numOfSuggestions": 1
+        },
+        {
+            "item": "Lethargic",
+            "numOfSuggestions": 1
+        }
+    ],
+    
+    "paired_suggestions": [
+        {
+            "key": "Overstimulated",
+            "suggestions": ["Listen to calming music", "Hug a squishmallow"]
+        },
+        {
+            "key": "Understimulated",
+            "suggestions": ["Play marimba", "Dance", "Play a round of MarioKart"]
+        },
+        {
+            "key": "Anxious",
+            "suggestions": ["Listen to calming music"]
+        },
+        {
+            "key": "Lethargic",
+            "suggestions": ["Go for a walk"]
+        }
+    ]
+}

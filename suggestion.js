@@ -1,7 +1,7 @@
-function randomSuggestion(/*quandary*/) {
-
+function randomSuggestion() {
+    
 }
 
 function saveData() {
-    
+
 }
