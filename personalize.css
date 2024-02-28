@@ -1,4 +1,10 @@
-#new {
+#new_suggestion {
+    color: black;
+    background-color:rgb(198, 197, 205);
+    width: 15vw;
+}
+
+#new_quandary {
     color: black;
     background-color:rgb(198, 197, 205);
     width: 15vw;
