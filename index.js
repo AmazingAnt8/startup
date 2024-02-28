@@ -1,6 +1,15 @@
-function login() {
-    //retrieve stored data about user
+function loginFunc () {
+    console.log(localStorage.getItem("username"));
+    if (document.getElementById("username").value === localStorage.getItem("username")) {
+        window.location.href = "quandary_selection.html";
+    }
+    else {
+        alert("Must enter valid username and password");
+    }
 }
+
+
+
 
 function newUser () {
     const username = document.querySelector("#username");
@@ -10,11 +19,3 @@ function newUser () {
     window.location.href = "personalize.html";
 }
 
-function login () {
-    if (document.querySelector("#username") === localStorage.getItem("username")) /*why isn't this working?*/{
-        window.location.href = "quandary_selection.html";
-    }
-    else {
-        alert("Must enter valid username and password");
-    }
-}
