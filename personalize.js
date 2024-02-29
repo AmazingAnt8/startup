@@ -46,6 +46,7 @@ function addNewQuandary() {
     console.log(userQuandaries[0]);
     userQuandaries.push([newQuandary.value, 0]);
     console.log(userQuandaries[4]);
+    document.getElementById("added_new").innerHTML = newQuandary.value;
 
     // console.log(JSON.stringify(userQuandaries));
     // let add = JSON.stringify(newQuandary);

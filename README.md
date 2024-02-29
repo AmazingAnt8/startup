@@ -69,10 +69,13 @@ Properly styled CSS
 
 ## JavaScript
 - Future login: 
-    - If you type in a username and password and click "Create new account", that username and password are saved to local storage and you are taken to personalize.html to set up your account. If you click "Login", your username and password must match the username and password in local storage.
-    - Username is displayed in the header
+    - If you type in a username and password and click "Create new account", that username and password are saved to local storage and you are taken to personalize.html to set up your account. If you click "Login", your username and password must match the username and password in local storage. (if you forget your username/password just enter something and click "Create new account")
 - Future database data:
     - Users can enter new quandaries and suggestions, which are stored in JavaScript arrays. This will later be changed to persistent database data, customizable for each user.
 - Future WebSocket:
     - On the friends page, the number of people celebrated randomly increments to represent the future realtime communication between users.
 - Interaction logic:
+    - The username entered at login is displayed in the header
+    - The main logic currently exists on the quandary selection page. Selecting a quandary will display that quandary at the bottom of the page, along with a randomly-generated suggestion from the list paired with the chosen quandary. 
+    - The personalize page allows for adding and displaying a new custom quandary. That quandary does not yet transfer over to the quandary selection page, and there is not yet an option to add suggestions with it. This would be much easier to do with json files.
+    - My entire website basically requires persistent database data to really be effective so a lot more will come.
