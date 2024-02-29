@@ -33,17 +33,19 @@
             <h1>Personalize</h1>
             <!--These lists are individualized to each person-->
             <!--This is just an example display-->
-            <p>Overstimulated suggestions:</p>
+            <p>Overstimulated suggestions: <button type="submit">Remove category</button></p>
             <!--Buttons to edit list-->
             <ul>
-                <li>Listen to a very quiet song on loop </li>
-                <li>Hug a squishmallow </li>
+                <li>Listen to a very quiet song on loop <button type="submit">Remove</button></li>
+                <li>Hug a squishmallow <button type="submit">Remove</button></li>
+                <li><input type="text" id="new_suggestion" name="new_suggestion" placeholder="Add new suggestion"><button type="submit">Save</button></li>
             </ul>
-            <p>Understimulated suggestions: </p>
+            <p>Understimulated suggestions: <button type="submit">Remove category</button></p>
             <ul>
-                <li>Dance </li>
-                <li>Play a round of MarioKart </li>
-                <li>Play the marimba </li>
+                <li>Dance like no one is watching! <button type="submit">Remove</button></li>
+                <li>Play a round of MarioKart <button type="submit">Remove</button></li>
+                <li>Play the marimba <button type="submit">Remove</button></li>
+                <li><input type="text" id="new_suggestion" name="new_suggestion" placeholder="Add new suggestion"><button type="submit">Save</button></li>
             </ul>
             <form method="get" onsubmit="return false">
                 <div class="text_enter">

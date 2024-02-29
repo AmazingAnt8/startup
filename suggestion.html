@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="suggestion.css">
     </head>
 
-    <body>
+    <body onload="randomSuggestion()">
         <header>
             <h1>Neurospicy Care</h1>
             <div class="logo">
@@ -18,12 +18,10 @@
         </header>
         <main>
             <h4>You chose:</h4>
-            <!--Display the chosen quandary here (filler below)-->
-            <h3>Understimulated</h3>
+            <h3 id="selected_quandary"></h3>
             <br />
             <h4>Your suggestion:</h4>
-            <!--Display the randomized suggestion here (filler below)-->
-            <h3>Dance like no one is watching!</h3>
+            <h3 id="random_suggestion"></h3>
             <br />
             <p>Helpful?</p>
             <!--Buttons to save data on what suggestions were helpful (run function on submit)-->
@@ -44,4 +42,5 @@
             </div>
         </footer>
     </body>
+    <script src="personalize.js"></script>
 </html>

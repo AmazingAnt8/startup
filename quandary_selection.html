@@ -43,7 +43,7 @@
                         </form>
                     </div>
                     <div class="column">
-                        <form method="get" action="suggestion.html">
+                        <form method="get" onsubmit="return false">
                             <label for="journal">Options--if you are unsure, just pick one you think might be right:</label>
                             <br />
                             <!--I'm going to have to figure out how to have a variable number of these with variable names-->
@@ -69,7 +69,17 @@
                         </form>
                     </div>
                 </div>
+                <div>
+                    <h4>You chose:</h4>
+                    <h3 id="selected_quandary"></h3>
+                    <br />
+                    <h4>Your suggestion:</h4>
+                    <h3 id="random_suggestion"></h3>
+                    <br />
+                    <a href="personalize.html">Continue to personal page</a>
+                </div>
             </div>
+            
           </main>
 
         <footer>
@@ -79,5 +89,5 @@
         </footer>
     </body>
 
-    <script src="quandary_selection.js"></script>
+    <script src="personalize.js"></script>
 </html>
