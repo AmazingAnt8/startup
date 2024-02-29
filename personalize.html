@@ -16,7 +16,10 @@
                     Image by vilmosvarga</a>
             </div>
             <p>
-                Hi, {username}!
+                <p id="usernameDisplay"></p>
+                <script>
+                    document.getElementById("usernameDisplay").innerHTML = "Hi, " + localStorage.getItem("username") + "!";
+                </script>
                 <br />
                 <a href="quandary_selection.html">Quandary Selection</a>  |  
                 <a href="personalize.html">Personalize</a>  |  

@@ -68,9 +68,11 @@ Properly styled CSS
     - Image logo justified right  
 
 ## JavaScript
-- Future login: If you type in a username and password and click "Create new account", that username and password are saved to local storage and you are taken to personalize.html to set up your account. If you click "Login", your username and password must match the username and password in local storage.
+- Future login: 
+    - If you type in a username and password and click "Create new account", that username and password are saved to local storage and you are taken to personalize.html to set up your account. If you click "Login", your username and password must match the username and password in local storage.
     - Username is displayed in the header
 - Future database data:
     - Users can enter new quandaries and suggestions, which are stored in JavaScript arrays. This will later be changed to persistent database data, customizable for each user.
 - Future WebSocket:
+    - On the friends page, the number of people celebrated randomly increments to represent the future realtime communication between users.
 - Interaction logic:

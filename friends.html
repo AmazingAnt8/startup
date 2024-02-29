@@ -15,7 +15,10 @@
                     Image by vilmosvarga</a>
             </div>
             <p>
-                Hi, {username}!
+                <p id="usernameDisplay"></p>
+                <script>
+                    document.getElementById("usernameDisplay").innerHTML = "Hi, " + localStorage.getItem("username") + "!";
+                </script>
                 <br />
                 <a href="quandary_selection.html">Quandary Selection</a>  |  
                 <a href="personalize.html">Personalize</a>  |  
@@ -35,7 +38,7 @@
                     <!--Third-party service call-->
                     {date and time}
                     <br />
-                    5 people celebrated
+                    <p id="celebratedCount"></p>
                     <img src="https://c.pxhere.com/images/6b/db/9a7107e8af5a8b18a86d741be0c3-1457587.jpg!d" width="20">
                     <!--Clicking this image will allow you to share your celebration-->
                     <!--The count will update in real time of how many people have celebrated-->
@@ -49,4 +52,5 @@
                 <a href="https://github.com/AmazingAnt8/startup">GitHub Repo</a>
             </div>
         </footer>
+        <script src="friends.js"></script>
     </body>
