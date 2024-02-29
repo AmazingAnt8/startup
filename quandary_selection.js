@@ -1,7 +1,7 @@
-function saveJournal(text) {
+function saveJournal() {
 
 }
 
-function saveQuandarySelection(selection) {
-
+function saveQuandarySelection() {
+    
 }

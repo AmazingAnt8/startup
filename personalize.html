@@ -44,9 +44,11 @@
                 <li>Play the marimba <button type="submit">Remove</button></li>
                 <li><input type="text" id="new_suggestion" name="new_suggestion" placeholder="Add new suggestion"><button type="submit">Save</button></li>
             </ul>
-            <div class="text_enter">
-                <input type="text" id="new_quandary" name="new_quandary" placeholder="Add new quandary"><button id="quandary_save" type="submit">Save</button>
-            </div>
+            <form method="get" onsubmit="return false">
+                <div class="text_enter">
+                    <input type="text" id="new_quandary" name="new_quandary" placeholder="Add new quandary"><button id="quandary_save" type="submit">Save</button>
+                </div>
+            </form>
         </main>
         <footer>
             <div class="content">
@@ -55,4 +57,6 @@
                 <a href="https://github.com/AmazingAnt8/startup">GitHub Repo</a>
             </div>
         </footer>
+
+        <script src="personalize.js"></script>
     </body>
