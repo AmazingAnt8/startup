@@ -623,3 +623,16 @@ Will output 4
 23. (/23f674a9-8d2f-4bc3-a358-852c63e25498.webp) outputs: A D B
     - Await/async: waits until the await is done
     - promise: doesn’t wait until it’s done
+
+## After Midterm   
+### node.js
+Just remember the main steps:  
+1. Create your project directory  
+2. Initialize it for use with NPM by running npm init -y  
+3. Make sure .gitignore file contains node_modules  
+4. Install any desired packages with npm install <package name here>  
+5. Add require('<package name here>') to your application's JavaScript  
+6. Use the code the package provides in your JavaScript  
+7. Run your code with node index.js  
+
+Browser to "localhost:8080" to see your website
