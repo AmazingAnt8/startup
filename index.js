@@ -15,8 +15,10 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // selectedQuandary
-apiRouter.get('/selected_quandary', (_req, res) => {
-    console.log("node worked");
+apiRouter.post('/selected_quandary', (req, res) => {
+    console.log(".post");
+    console.log(req.body);
+    selected_quandary = req.body;
     res.send(selected_quandary);
   });
 
@@ -30,6 +32,9 @@ user posts
 friend posts
 celebration counts
 */
+
+// storage
+let selected_quandary = "";
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
