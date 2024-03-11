@@ -15,13 +15,15 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // selectedQuandary
-let select = "";
 apiRouter.post('/selected_quandary', (req, res) => {
     console.log(".post");
     console.log(req.body);
     selected_quandary = req.body;
     res.send(selected_quandary);
-  });
+});
+apiRouter.get('/selected_quandary', (_req, res) => {
+    res.send(selected_quandary);
+});
 
 /*
 Endpoints are for things I would later put in my databases:

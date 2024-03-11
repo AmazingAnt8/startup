@@ -1,4 +1,9 @@
 let result;
+let chosen;
+let userQuandaries = [["Overstimulated", 2], ["Understimulated", 3], ["Anxious", 1], ["Lethargic", 1]];
+let userPairedSuggestions = [["Listen to calming music", "Hug a squishmallow"], ["Play marimba", "Dance", "Play a round of MarioKart"], 
+    ["Listen to calming music"], ["Go for a walk"]];
+
 async function selectedQuandary() {
     const inputs = document.getElementsByName("varRadio");
     for (i = 0; i < inputs.length; i++) {
@@ -11,9 +16,7 @@ async function selectedQuandary() {
     // selected_quandary = await response.value.json();
     // localStorage.setItem('selected_quandary', JSON.stringify(selected_quandary));
 
-    // NOT DOING WHAT'S INTENDED
-    // I think this is pulling a saved value from my backend. Instead I'm trying to save my result to the backend so I can access it in other functions.
-    // How do I do that?
+    // Save result to backend
     try {
       const response = await fetch('/api/selected_quandary', {
         method: 'POST',
@@ -28,8 +31,27 @@ async function selectedQuandary() {
     } catch {
       console.log("error");
     }
+    const response = await fetch('/api/selected_quandary');
+    chosen = await response.json();
+    randomSuggestion(response);
+}
 
+//get selected quandary from backend
+let suggestion;
+function randomSuggestion(quandary) {
+    console.log("random");
+    console.log(quandary);
+    for (i = 0; i < userQuandaries.length; i++) {
+        if (result === userQuandaries[i][0]) {
+            let length = userPairedSuggestions[i].length;
+            num = Math.floor(Math.random() * length);
+            suggestion = userPairedSuggestions[i][num];     
+        }
+    }
+    console.log(suggestion);
 
+    document.getElementById("selected_quandary").innerHTML = result;
+    document.getElementById("random_suggestion").innerHTML = suggestion;
 }
 
 function saveJournal() {
