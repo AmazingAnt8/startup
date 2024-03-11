@@ -15,6 +15,7 @@ var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 // selectedQuandary
+let select = "";
 apiRouter.post('/selected_quandary', (req, res) => {
     console.log(".post");
     console.log(req.body);

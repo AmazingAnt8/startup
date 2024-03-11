@@ -1,3 +1,4 @@
+let result;
 async function selectedQuandary() {
     const inputs = document.getElementsByName("varRadio");
     for (i = 0; i < inputs.length; i++) {
@@ -5,6 +6,7 @@ async function selectedQuandary() {
             result = inputs[i].value;
         }
     }
+    console.log(result);
     // const response = await fetch('/api/selected_quandary');
     // selected_quandary = await response.value.json();
     // localStorage.setItem('selected_quandary', JSON.stringify(selected_quandary));
@@ -15,6 +17,7 @@ async function selectedQuandary() {
     try {
       const response = await fetch('/api/selected_quandary', {
         method: 'POST',
+        body: JSON.stringify(result),
       });
 
       const selected_quandary = await response.json();
@@ -24,6 +27,8 @@ async function selectedQuandary() {
     } catch {
       console.log("error");
     }
+
+
 }
 
 function saveJournal() {

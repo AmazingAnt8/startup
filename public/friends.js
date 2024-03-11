@@ -5,6 +5,7 @@ setInterval(function celebrate() {
     document.getElementById("celebratedCount").innerHTML = i + " people celebrated!";
 }, Math.random() * 5000);
 
+
 function newPost() {
 
 }
