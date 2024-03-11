@@ -17,7 +17,8 @@ async function selectedQuandary() {
     try {
       const response = await fetch('/api/selected_quandary', {
         method: 'POST',
-        body: JSON.stringify(result),
+        headers: {'content-type': 'application/json'},
+        body: JSON.stringify({result}),
       });
 
       const selected_quandary = await response.json();
