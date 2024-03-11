@@ -1,8 +1,5 @@
 let result;
 let chosen;
-let userQuandaries = [["Overstimulated", 2], ["Understimulated", 3], ["Anxious", 1], ["Lethargic", 1]];
-let userPairedSuggestions = [["Listen to calming music", "Hug a squishmallow"], ["Play marimba", "Dance", "Play a round of MarioKart"], 
-    ["Listen to calming music"], ["Go for a walk"]];
 
 async function selectedQuandary() {
     const inputs = document.getElementsByName("varRadio");
@@ -55,9 +52,5 @@ function randomSuggestion(quandary) {
 }
 
 function saveJournal() {
-    //will add to database later if needed
-}
-
-function saveQuandarySelection() {
     //will add to database later if needed
 }

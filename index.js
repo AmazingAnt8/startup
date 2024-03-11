@@ -25,6 +25,15 @@ apiRouter.get('/selected_quandary', (_req, res) => {
     res.send(selected_quandary);
 });
 
+// pairedQuandariesList
+apiRouter.get('/paired_quandaries_list', (_req, res) => {
+    res.send(pairedQuandariesList);
+});
+apiRouter.post('paired_quandaries_list', (req, res) => {
+    selected_quandary = req.body;
+    res.send(selected_quandary);
+})
+
 /*
 Endpoints are for things I would later put in my databases:
 get quandaries and suggestions
@@ -38,6 +47,7 @@ celebration counts
 
 // storage
 let selected_quandary = "";
+let pairedQuandariesList = [];
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
