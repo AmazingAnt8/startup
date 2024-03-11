@@ -8,17 +8,21 @@ async function selectedQuandary() {
     // const response = await fetch('/api/selected_quandary');
     // selected_quandary = await response.value.json();
     // localStorage.setItem('selected_quandary', JSON.stringify(selected_quandary));
+
+    // NOT DOING WHAT'S INTENDED
+    // I think this is pulling a saved value from my backend. Instead I'm trying to save my result to the backend so I can access it in other functions.
+    // How do I do that?
     try {
       const response = await fetch('/api/selected_quandary', {
         method: 'POST',
       });
 
-      // Store what the service gave us as the high scores
       const selected_quandary = await response.json();
       localStorage.setItem('selected_quandary', JSON.stringify(selected_quandary));
+      console.log("made it");
+      console.log(JSON.stringify(selected_quandary));
     } catch {
-      // If there was an error then just track scores locally
-      this.updateScoresLocal(newScore);
+      console.log("error");
     }
 }
 
