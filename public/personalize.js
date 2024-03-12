@@ -1,9 +1,26 @@
 // example starting ideas
-let userQuandaries = [["Overstimulated", 2], ["Understimulated", 3], ["Anxious", 1], ["Lethargic", 1]];
-let userPairedSuggestions = [["Listen to calming music", "Hug a squishmallow"], ["Play marimba", "Dance", "Play a round of MarioKart"], 
-    ["Listen to calming music"], ["Go for a walk"]];
+let quandaryList = [];
 
 async function pairedQuandariesList() {
     // get the user-inputted quandaries and suggestions
+    const newQuandary = document.querySelector("#new_quandary");
+    const quandarySave = document.querySelector("#quandary_save");
+    const newItem = {quandary: newQuandary.value, suggestions: []};
+
     // save to backend
+    try {
+        const response = await fetch('/api/paired_quandaries_list', {
+          method: 'POST',
+          headers: {'content-type': 'application/json'},
+          body: JSON.stringify(newItem),
+        });
+  
+        const list = await response.json();
+        localStorage.setItem('paired_quandaries_list', JSON.stringify(list));
+        console.log("made it");
+        console.log(JSON.stringify(list));
+      } catch {
+        console.log("error");
+      }
+    document.getElementById("display_new").innerHTML = newQuandary.value;
 }

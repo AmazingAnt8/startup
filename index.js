@@ -29,7 +29,7 @@ apiRouter.get('/selected_quandary', (_req, res) => {
 apiRouter.get('/paired_quandaries_list', (_req, res) => {
     res.send(pairedQuandariesList);
 });
-apiRouter.post('paired_quandaries_list', (req, res) => {
+apiRouter.post('/paired_quandaries_list', (req, res) => {
     selected_quandary = req.body;
     res.send(selected_quandary);
 })

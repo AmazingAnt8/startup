@@ -28,6 +28,8 @@ async function selectedQuandary() {
     } catch {
       console.log("error");
     }
+
+    // Retrieve from backend (not really necessary here but to make sure I can)
     const response = await fetch('/api/selected_quandary');
     chosen = await response.json();
     randomSuggestion(response);
