@@ -79,3 +79,16 @@ Properly styled CSS
     - The main logic currently exists on the quandary selection page. Selecting a quandary will display that quandary at the bottom of the page, along with a randomly-generated suggestion from the list paired with the chosen quandary. 
     - The personalize page allows for adding and displaying a new custom quandary. That quandary does not yet transfer over to the quandary selection page, and there is not yet an option to add suggestions with it. This would be much easier to do with json files.
     - My entire website basically requires persistent database data to really be effective so a lot more will come.
+
+## Service
+- Create an HTTP service using Node.js and Express
+    - I did this
+- Frontend served up using Express static middleware
+    - I did this
+- Your frontend calls third party service endpoints
+    - 
+- Your backend provides service endpoints
+    - index.js file with get and post functions
+- Your frontend calls your service endpoints
+    - quandary_selection.js saves the value from the selected radio button with the backend endpoint, and then retrieves that value with the endpoint
+    - personalize.js saves the entered text with the backend endpoint
