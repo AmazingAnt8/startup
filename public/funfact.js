@@ -1,5 +1,7 @@
 async function displayFact () {
-    const url = 'https://numbersapi.p.rapidapi.com/1729/math?fragment=true&json=true';
+    let randNum = String(Math.floor(Math.random() * 5000));
+    console.log(randNum);
+    const url = 'https://numbersapi.p.rapidapi.com/' + randNum + '/math?json=true';
     const options = {
         method: 'GET',
         headers: {
@@ -10,10 +12,11 @@ async function displayFact () {
 
     try {
         const response = await fetch(url, options);
-        const result = await JSON.stringify(response["text"]);
-        console.log(typeof response);
+        let result = await response.text();
+        result = JSON.parse(result);
         console.log(result);
-        localStorage.setItem('fun_fact', result);
+        console.log(result.text);
+        localStorage.setItem('fun_fact', result.text);
     } catch (error) {
         console.error(error);
     }

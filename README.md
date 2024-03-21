@@ -86,7 +86,7 @@ Properly styled CSS
 - Frontend served up using Express static middleware
     - I did this
 - Your frontend calls third party service endpoints
-    - 
+    - funfact.html displays a random number fact using a 3rd-party API
 - Your backend provides service endpoints
     - index.js file with get and post functions
 - Your frontend calls your service endpoints
