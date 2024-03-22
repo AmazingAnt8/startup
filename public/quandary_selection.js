@@ -56,3 +56,10 @@ function randomSuggestion(quandary) {
 function saveJournal() {
     //will add to database later if needed
 }
+
+function logout() {
+    localStorage.removeItem('username');
+    fetch(`/api/auth/logout`, {
+      method: 'delete',
+    }).then(() => (window.location.href = 'index.html'));
+  }

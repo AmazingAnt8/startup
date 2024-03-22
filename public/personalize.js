@@ -24,3 +24,10 @@ async function pairedQuandariesList() {
       }
     document.getElementById("display_new").innerHTML = newQuandary.value;
 }
+
+function logout() {
+  localStorage.removeItem('username');
+  fetch(`/api/auth/logout`, {
+    method: 'delete',
+  }).then(() => (window.location.href = 'index.html'));
+}

@@ -1,2 +1,6 @@
 node_modules
 dbConfig.json
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
