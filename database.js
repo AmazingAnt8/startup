@@ -7,7 +7,7 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
-const scoreCollection = db.collection('defaultQuandaries');
+const quandaryCollection = db.collection('defaultQuandaries');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -29,15 +29,34 @@ function getUserByToken(token) {
 async function createUser(username, password) {
   // Hash the password before we insert it into the database
   const passwordHash = await bcrypt.hash(password, 10);
-
+  const defaultQuandaries = ["Overstimulated", "Understimulated", "Anxious", "Lethargic"];
+  const defaultSuggestions = [["Listen to calming music", "Hug a stuffed animal"], ["Dance", "Engage in a special interest/hyperfixation"], 
+    ["Listen to calming music", "Talk with a friend"], ["Go for a walk", "Engage in a special interest/hyperfixation"]];
+  
   const user = {
     username: username,
     password: passwordHash,
+    quandaries: defaultQuandaries,
+    suggestions: defaultSuggestions,
     token: uuid.v4(),
   };
   await userCollection.insertOne(user);
 
   return user;
+}
+
+function addQuandary(quandary) {
+    userCollection.updateOne(
+        { username: localStorage.getItem('username') },
+        { $push: { quandaries: quandary }}
+    );
+}
+
+function addSuggestion(suggestion, index) {
+    userCollection.updateOne(
+        { username: localStorage.getItem('username') },
+        { $push: { suggestions: quandary }}, //how do I insert into a nested array?
+    )
 }
 
 /*

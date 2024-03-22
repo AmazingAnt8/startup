@@ -37,8 +37,6 @@
         alert("Must enter valid username and password");
     }
   }
-  
-  
 
   
   async function getUser(username) {
@@ -50,13 +48,6 @@
     }
   
     return null;
-  }
-  
-  function setDisplay(controlId, display) {
-    const playControlEl = document.querySelector(`#${controlId}`);
-    if (playControlEl) {
-      playControlEl.style.display = display;
-    }
   }
 
 // function loginFunc () {
