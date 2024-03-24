@@ -27,6 +27,7 @@ app.use(`/api`, apiRouter);
 
 // CreateAuth token for a new user
 apiRouter.post('/auth/create', async (req, res) => {
+    console.log(".post");
     if (await DB.getUser(req.body.username)) {
       res.status(409).send({ msg: 'Existing user' });
     } else {
@@ -121,6 +122,15 @@ celebration counts
 // storage
 let selected_quandary = "";
 let pairedQuandariesList = [];
+
+// setAuthCookie in the HTTP response
+function setAuthCookie(res, authToken) {
+    res.cookie(authCookieName, authToken, {
+      secure: true,
+      httpOnly: true,
+      sameSite: 'strict',
+    });
+  }
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

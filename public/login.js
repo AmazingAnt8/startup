@@ -16,21 +16,24 @@
   }
   
   async function newUser() {
+    console.log("newUser()");
     loginOrCreate(`/api/auth/create`);
   }
   
   async function loginOrCreate(endpoint) {
     const username = document.querySelector('#username')?.value;
     const password = document.querySelector('#password')?.value;
+    console.log("username: " + username + " password: " + password);
     const response = await fetch(endpoint, {
-      method: 'post',
-      body: JSON.stringify({ username: username, password: password }),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
+        method: 'post',
+        body: JSON.stringify({ username: username, password: password }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
     });
   
     if (response.ok) {
+      console.log(response.ok);
       localStorage.setItem('username', username);
       window.location.href = 'quandary_selection.html';
     } else {

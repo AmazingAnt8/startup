@@ -11,6 +11,7 @@ const quandaryCollection = db.collection('defaultQuandaries');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
+  console.log("testing");
   await client.connect();
   await db.command({ ping: 1 });
 })().catch((ex) => {
@@ -28,6 +29,7 @@ function getUserByToken(token) {
 
 async function createUser(username, password) {
   // Hash the password before we insert it into the database
+  console.log("createUser");
   const passwordHash = await bcrypt.hash(password, 10);
   const defaultQuandaries = ["Overstimulated", "Understimulated", "Anxious", "Lethargic"];
   const defaultSuggestions = [["Listen to calming music", "Hug a stuffed animal"], ["Dance", "Engage in a special interest/hyperfixation"], 
@@ -43,6 +45,12 @@ async function createUser(username, password) {
   await userCollection.insertOne(user);
 
   return user;
+}
+
+async function getRandomQuandary() {
+    let n = 0;
+    let result = userCollection.find({ username : localStorage.getItem('username') }, { quandaries : { $slice : [n , 1] } } );
+    console.log(result);
 }
 
 function addQuandary(quandary) {

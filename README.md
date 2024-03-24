@@ -92,3 +92,15 @@ Properly styled CSS
 - Your frontend calls your service endpoints
     - quandary_selection.js saves the value from the selected radio button with the backend endpoint, and then retrieves that value with the endpoint
     - personalize.js saves the entered text with the backend endpoint
+
+## Login
+- Supports new user registration
+    - The "Create new account" button on index.html creates a new user
+- Supports existing user authentication
+    - The "Login" button on index.html authenticates the user
+- Stores application data in MongoDB
+- Stores and retrieves credentials in MongoDB
+    - When a user is created, their username and password are saved in MongoDB
+    - When an existing user tries to log in, their credentials are matched to the ones stored in MongoDB
+- Restricts application functionality based upon authentication
+    - The user is not able to access the rest of the website until they have either created an account or logged in correctly
