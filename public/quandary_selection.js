@@ -63,3 +63,9 @@ function logout() {
       method: 'delete',
     }).then(() => (window.location.href = 'index.html'));
   }
+
+async function sendCompletion() {
+    const msg = " completed a self-care suggestion!";
+    const username = localStorage.getItem('username');
+    socket.send(`{"name":"${username}", "msg":"${msg}"}`);
+}

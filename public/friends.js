@@ -17,7 +17,6 @@ function logout() {
     }).then(() => (window.location.href = 'index.html'));
   }
 
-// Simon--play.js--update to my stuff
 function configureWebSocket() {
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
     socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
@@ -32,11 +31,7 @@ function configureWebSocket() {
     };
     socket.onmessage = async (event) => {
       const msg = JSON.parse(await event.data.text());
-      if (msg.type === GameEndEvent) {
-        this.displayMsg('player', msg.from, `scored ${msg.value.score}`);
-      } else if (msg.type === GameStartEvent) {
-        this.displayMsg('player', msg.from, `started a new game`);
-      }
+      document.querySelector('#friendsCompleted').innerHTML = msg;
     };
 }
 
