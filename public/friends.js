@@ -1,9 +1,9 @@
-var i = 0;
+/*var i = 0;
 setInterval(function celebrate() {
     //future WebSocket
     ++i;
     document.getElementById("celebratedCount").innerHTML = i + " people celebrated!";
-}, Math.random() * 5000);
+}, Math.random() * 5000);*/
 
 
 function newPost() {
@@ -20,12 +20,14 @@ function logout() {
 // Simon--play.js--update to my stuff
 function configureWebSocket() {
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
-    this.socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
-    this.socket.onopen = (event) => {
-      this.displayMsg('system', 'game', 'connected');
+    socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    socket.onopen = (event) => {
+        let text = document.querySelector('#friendsCompleted');
+        text.innerHTML('connected');
     };
-    this.socket.onclose = (event) => {
-      this.displayMsg('system', 'game', 'disconnected');
+    socket.onclose = (event) => {
+        let text = document.querySelector('#friendsCompleted');
+        text.innerHTML('disconnected');
     };
     this.socket.onmessage = async (event) => {
       const msg = JSON.parse(await event.data.text());
@@ -51,3 +53,5 @@ function broadcastEvent(from, type, value) {
     };
     this.socket.send(JSON.stringify(event));
 }
+
+configureWebSocket();
