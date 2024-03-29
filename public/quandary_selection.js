@@ -77,10 +77,10 @@ function logout() {
         text.innerHTML = 'disconnected';
     };
     socket.onmessage = async (event) => {
-      const msg = JSON.parse(await event.data.text());
+      const message = JSON.parse(await event.data.text());
       console.log("here");
-      console.log(msg);
-      document.querySelector('#friendsCompleted').innerHTML = msg;
+      console.log(message);
+      document.querySelector('#friendsCompleted').innerHTML = message.name + message.msg;
     };
 }
 
@@ -99,6 +99,7 @@ async function sendCompletion() {
     console.log("sendCompletion()");
     const msg = " completed a self-care suggestion!";
     const username = localStorage.getItem('username');
+    console.log(username);
     if (!!msg) {
         socket.send(`{"name":"${username}", "msg":"${msg}"}`);
     }
