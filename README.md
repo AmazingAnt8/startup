@@ -103,4 +103,14 @@ Properly styled CSS
     - When a user is created, their username and password are saved in MongoDB
     - When an existing user tries to log in, their credentials are matched to the ones stored in MongoDB
 - Restricts application functionality based upon authentication
-    - The user is not able to access the rest of the website until they have either created an account or logged in correctly
+    - The user is not able to access the rest of the website until they have either created an account or logged in correctly  
+
+## WebSocket
+- Backend listens for WebSocket connection
+    - peerProxy.js and index.js
+- Frontend makes WebSocket connection
+    - quandary_selection.js
+- Data sent over WebSocket connection
+    - In quandary_selection.html the "Suggestion Completed!" button sends a message over WebSocket to be displayed for everyone in real time.
+- WebSocket data displayed in the application interface
+    - This sent message is displayed in the right-side column on the same page.
