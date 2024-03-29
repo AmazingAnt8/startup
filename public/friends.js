@@ -21,15 +21,16 @@ function logout() {
 function configureWebSocket() {
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
     socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    console.log('configureWebSocket()');
     socket.onopen = (event) => {
         let text = document.querySelector('#friendsCompleted');
-        text.innerHTML('connected');
+        text.innerHTML = 'connected';
     };
     socket.onclose = (event) => {
         let text = document.querySelector('#friendsCompleted');
-        text.innerHTML('disconnected');
+        text.innerHTML = 'disconnected';
     };
-    this.socket.onmessage = async (event) => {
+    socket.onmessage = async (event) => {
       const msg = JSON.parse(await event.data.text());
       if (msg.type === GameEndEvent) {
         this.displayMsg('player', msg.from, `scored ${msg.value.score}`);
@@ -51,7 +52,7 @@ function broadcastEvent(from, type, value) {
       type: type,
       value: value,
     };
-    this.socket.send(JSON.stringify(event));
+    socket.send(JSON.stringify(event));
 }
 
 configureWebSocket();
