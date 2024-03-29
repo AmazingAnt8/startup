@@ -112,5 +112,6 @@ Properly styled CSS
     - quandary_selection.js
 - Data sent over WebSocket connection
     - In quandary_selection.html the "Suggestion Completed!" button sends a message over WebSocket to be displayed for everyone in real time.
+    - Uses local storage (just like Simon does), so must be run using two different browsers in order to have the correct username displayed.
 - WebSocket data displayed in the application interface
     - This sent message is displayed in the right-side column on the same page.
