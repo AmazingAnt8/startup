@@ -64,8 +64,42 @@ function logout() {
     }).then(() => (window.location.href = 'index.html'));
   }
 
+  function configureWebSocket() {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    socket = new WebSocket(`${protocol}://${window.location.host}/ws`);
+    console.log('configureWebSocket()');
+    socket.onopen = (event) => {
+        let text = document.querySelector('#friendsCompleted');
+        text.innerHTML = 'connected';
+    };
+    socket.onclose = (event) => {
+        let text = document.querySelector('#friendsCompleted');
+        text.innerHTML = 'disconnected';
+    };
+    socket.onmessage = async (event) => {
+      const msg = JSON.parse(await event.data.text());
+      console.log("here");
+      console.log(msg);
+      document.querySelector('#friendsCompleted').innerHTML = msg;
+    };
+}
+
+function broadcastEvent(from, type, value) {
+    const event = {
+      from: from,
+      type: type,
+      value: value,
+    };
+    socket.send(JSON.stringify(event));
+}
+
+configureWebSocket();
+
 async function sendCompletion() {
+    console.log("sendCompletion()");
     const msg = " completed a self-care suggestion!";
     const username = localStorage.getItem('username');
-    socket.send(`{"name":"${username}", "msg":"${msg}"}`);
+    if (!!msg) {
+        socket.send(`{"name":"${username}", "msg":"${msg}"}`);
+    }
 }
